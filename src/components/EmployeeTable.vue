@@ -6,13 +6,15 @@
           <th>Employee name</th>
           <th>Employee email</th>
           <th>ID</th>
+          <th>index</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="employee in employees" :key="employee.id">
+        <tr v-for="(employee, index) in employees" :key="index">
           <td>{{ employee.name }}</td>
           <td>{{ employee.email }}</td>
           <td>{{ employee.id }}</td>
+          <td>{{ index+1 }}</td>
         </tr>
       </tbody>
     </table>
